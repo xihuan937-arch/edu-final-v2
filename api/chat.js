@@ -1,7 +1,7 @@
 // Node 18 内置 fetch，无需任何依赖
 // ⚠️ 把 YOUR_KEY_HERE 替换成你的 DeepSeek API Key
 
-const DEEPSEEK_KEY = ‘sk-4bd3837a6afe4d6aab671116523fb81c’;
+const DEEPSEEK_KEY = "sk-4bd3837a6afe4d6aab671116523fb81c";
 
 module.exports = async function handler(req, res) {
   // 跨域头
@@ -13,7 +13,7 @@ module.exports = async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: '方法不允许' });
 
   // 取 Key（优先环境变量，其次代码内置）
-  const key = process.env.DEEPSEEK_KEY || ‘sk-4bd3837a6afe4d6aab671116523fb81c’;
+  const key = process.env.DEEPSEEK_KEY || 'sk-4bd3837a6afe4d6aab671116523fb81c';
   if (!key || key === 'sk-4bd3837a6afe4d6aab671116523fb81c') {
     return res.status(500).json({ error: '请配置 DeepSeek API Key' });
   }
