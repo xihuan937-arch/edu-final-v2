@@ -1,7 +1,7 @@
 // Node 18 内置 fetch，无需任何依赖
 // ⚠️ 把 YOUR_KEY_HERE 替换成你的 DeepSeek API Key
 
-const DEEPSEEK_KEY = “sk-4bd3837a6afe4d6aab671116523fb81c”;
+const DEEPSEEK_KEY = ‘sk-4bd3837a6afe4d6aab671116523fb81c’;
 
 module.exports = async function handler(req, res) {
   // 跨域头
